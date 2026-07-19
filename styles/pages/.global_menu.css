@@ -7,9 +7,3 @@
 [data-page=".global_menu"][data-itemid="welcome_item2"] > .bs-welcome-header {
   background-color: #CD853F;
 }
-[data-page=".global_menu"][data-itemid="welcome_item3"] > .bs-welcome-header {
-  background-color: #6493EA;
-}
-[data-page=".global_menu"][data-itemid="welcome_item4"] > .bs-welcome-header {
-  background-color: #E8926F;
-}
