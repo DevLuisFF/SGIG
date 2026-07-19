@@ -493,6 +493,10 @@ class Chart
 			return true;
 		if("transacciones" == $this->chrt_array['tables'][0])
 			return true;
+		if("periodos" == $this->chrt_array['tables'][0])
+			return true;
+		if("conceptos" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

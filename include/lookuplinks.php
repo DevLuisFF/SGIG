@@ -40,8 +40,8 @@ function InitLookupLinks()
 
 	$lookupTableLinks = array();
 
-	$lookupTableLinks["periodos"]["transacciones.periodo_id"]["edit"] = array("table" => "transacciones", "field" => "periodo_id", "page" => "edit");
-	$lookupTableLinks["conceptos"]["transacciones.concepto_id"]["edit"] = array("table" => "transacciones", "field" => "concepto_id", "page" => "edit");
+	$lookupTableLinks["periodos_lookup"]["transacciones.periodo_id"]["edit"] = array("table" => "transacciones", "field" => "periodo_id", "page" => "edit");
+	$lookupTableLinks["conceptos_lookup"]["transacciones.concepto_id"]["edit"] = array("table" => "transacciones", "field" => "concepto_id", "page" => "edit");
 }
 
 ?>

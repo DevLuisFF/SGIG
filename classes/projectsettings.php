@@ -2890,6 +2890,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "periodos" ] = "periodos";
 	$projectEntities[ "transacciones" ] = array( "url" => "transacciones", "type" => 0 );
 	$projectEntitiesReverse[ "transacciones" ] = "transacciones";
+	$projectEntities[ "periodos_lookup" ] = array( "url" => "periodos_lookup", "type" => 1 );
+	$projectEntitiesReverse[ "periodos_lookup" ] = "periodos_lookup";
+	$projectEntities[ "conceptos_lookup" ] = array( "url" => "conceptos_lookup", "type" => 1 );
+	$projectEntitiesReverse[ "conceptos_lookup" ] = "conceptos_lookup";
 }
 
 function findTable( $table ) {

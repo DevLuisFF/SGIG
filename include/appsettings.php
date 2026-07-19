@@ -617,6 +617,8 @@ $tableCaptions["Spanish"][""] = "";
 $tableCaptions["Spanish"]["conceptos"] = "Conceptos";
 $tableCaptions["Spanish"]["periodos"] = "Periodos";
 $tableCaptions["Spanish"]["transacciones"] = "Transacciones";
+$tableCaptions["Spanish"]["periodos_lookup"] = "Periodos Lookup";
+$tableCaptions["Spanish"]["conceptos_lookup"] = "Conceptos Lookup";
 
 
 $globalEvents = new class_GlobalEvents;

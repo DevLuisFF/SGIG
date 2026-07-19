@@ -32,13 +32,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstransacciones["Spanish"]["id"] = "Id";
 	$fieldToolTipstransacciones["Spanish"]["id"] = "";
 	$placeHolderstransacciones["Spanish"]["id"] = "";
-	$fieldLabelstransacciones["Spanish"]["periodo_id"] = "Periodo Id";
+	$fieldLabelstransacciones["Spanish"]["periodo_id"] = "Periodo";
 	$fieldToolTipstransacciones["Spanish"]["periodo_id"] = "";
 	$placeHolderstransacciones["Spanish"]["periodo_id"] = "";
-	$fieldLabelstransacciones["Spanish"]["concepto_id"] = "Concepto Id";
+	$fieldLabelstransacciones["Spanish"]["concepto_id"] = "Concepto";
 	$fieldToolTipstransacciones["Spanish"]["concepto_id"] = "";
 	$placeHolderstransacciones["Spanish"]["concepto_id"] = "";
-	$fieldLabelstransacciones["Spanish"]["tipo"] = "Tipo";
+	$fieldLabelstransacciones["Spanish"]["tipo"] = "Categoría";
 	$fieldToolTipstransacciones["Spanish"]["tipo"] = "";
 	$placeHolderstransacciones["Spanish"]["tipo"] = "";
 	$fieldLabelstransacciones["Spanish"]["monto"] = "Monto";
@@ -444,7 +444,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "periodos";
+	$edata["LookupTable"] = "periodos_lookup";
 		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -453,7 +453,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "id";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "id";
+	$edata["DisplayField"] = "display_name";
 
 	
 
@@ -510,7 +510,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -593,7 +593,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "conceptos";
+	$edata["LookupTable"] = "conceptos_lookup";
 		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -602,7 +602,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "id";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "id";
+	$edata["DisplayField"] = "display_name";
 
 	
 
@@ -659,7 +659,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -979,6 +979,38 @@ $masterTablesData["transacciones"] = array();
 	$masterTablesData["transacciones"][1]["masterKeys"][]="id";
 				$masterTablesData["transacciones"][1]["detailKeys"] = array();
 	$masterTablesData["transacciones"][1]["detailKeys"][]="concepto_id";
+		
+	
+				$strOriginalDetailsTable="periodos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="periodos_lookup";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "periodos_lookup";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["transacciones"][2] = $masterParams;
+				$masterTablesData["transacciones"][2]["masterKeys"] = array();
+	$masterTablesData["transacciones"][2]["masterKeys"][]="id";
+				$masterTablesData["transacciones"][2]["detailKeys"] = array();
+	$masterTablesData["transacciones"][2]["detailKeys"][]="periodo_id";
+		
+	
+				$strOriginalDetailsTable="conceptos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="conceptos_lookup";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "conceptos_lookup";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["transacciones"][3] = $masterParams;
+				$masterTablesData["transacciones"][3]["masterKeys"] = array();
+	$masterTablesData["transacciones"][3]["masterKeys"][]="id";
+				$masterTablesData["transacciones"][3]["detailKeys"] = array();
+	$masterTablesData["transacciones"][3]["detailKeys"][]="concepto_id";
 		
 // -----------------end  prepare master-details data arrays ------------------------------//
 

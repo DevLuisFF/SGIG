@@ -265,6 +265,10 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("transacciones" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
+	if ("periodos_lookup" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("conceptos_lookup" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
 	return false;
 }
 
@@ -317,6 +321,8 @@ function GetTablesList($pdfMode = false)
 		$arr[]="conceptos";
 		$arr[]="periodos";
 		$arr[]="transacciones";
+		$arr[]="periodos_lookup";
+		$arr[]="conceptos_lookup";
 	return $arr;
 }
 
@@ -329,6 +335,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="conceptos";
 	$arr[]="periodos";
 	$arr[]="transacciones";
+	$arr[]="periodos_lookup";
+	$arr[]="conceptos_lookup";
 	return $arr;
 }
 
@@ -996,6 +1004,14 @@ function GetUserPermissions($table="")
 		$permissions =  "ADESPIM";
 	}
 	if($table=="transacciones")
+	{
+		$permissions =  "ADESPIM";
+	}
+	if($table=="periodos_lookup")
+	{
+		$permissions =  "ADESPIM";
+	}
+	if($table=="conceptos_lookup")
 	{
 		$permissions =  "ADESPIM";
 	}
