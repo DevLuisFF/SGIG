@@ -319,6 +319,8 @@ class ConnectionManager
 		$connectionsIds["conceptos"] = "sgig_at_localhost";
 		$connectionsIds["periodos"] = "sgig_at_localhost";
 		$connectionsIds["transacciones"] = "sgig_at_localhost";
+		$connectionsIds["periodos_lookup"] = "sgig_at_localhost";
+		$connectionsIds["conceptos_lookup"] = "sgig_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

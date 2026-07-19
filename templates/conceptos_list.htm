@@ -252,19 +252,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_nombre}</span>
 						</div>
 		{END searchCtrlBlock_nombre}
-																{BEGIN searchCtrlBlock_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
-			<label>{$label conceptos id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
-						</div>
-		{END searchCtrlBlock_id}
 		
 
 	</div>
@@ -495,22 +482,22 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_class}
+		 r-ori-vert				{$nombre_class}
 			"
 
-			data-field="id"
+			data-field="nombre"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_fieldheadercolumn}
-	{BEGIN id_fieldheader}
-	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id">
-	{$label conceptos id }	{$arrow_icon_id}
+		{BEGIN nombre_fieldheadercolumn}
+	{BEGIN nombre_fieldheader}
+	<SPAN {$nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nombre">
+	{$label conceptos nombre }	{$arrow_icon_nombre}
 	</SPAN>
-	{END id_fieldheader}
-{END id_fieldheadercolumn}
+	{END nombre_fieldheader}
+{END nombre_fieldheadercolumn}
 
 	
 	</th>
@@ -522,45 +509,18 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$nombre_class}
-			"
-
-			data-field="nombre"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nombre_fieldheadercolumn}
-	{BEGIN nombre_fieldheader}
-	<SPAN {$nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nombre">
-	{$label conceptos nombre }	{$arrow_icon_nombre}
-	</SPAN>
-	{END nombre_fieldheader}
-{END nombre_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-				 
-					{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$descripcion_class}
 			"
 
 			data-field="descripcion"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN descripcion_fieldheadercolumn}
 	{BEGIN descripcion_fieldheader}
-	<SPAN {$descripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="descripcion">
+	<SPAN {$descripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="descripcion">
 	{$label conceptos descripcion }	{$arrow_icon_descripcion}
 	</SPAN>
 	{END descripcion_fieldheader}
@@ -568,7 +528,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field1}
 							</tr>
 					 
 					 
@@ -693,35 +653,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_class}
-			"
-
-			data-field="id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" >
-{$id_value}
-</span>
-{END id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$nombre_class}
 			"
 
 			data-field="nombre"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -731,12 +668,12 @@
 </span>
 {END nombre_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 				 
-					{BEGIN cellblock_grid_cell_field2}
+					{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$descripcion_class}
@@ -744,7 +681,7 @@
 
 			data-field="descripcion"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -754,7 +691,7 @@
 </span>
 {END descripcion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -882,22 +819,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-				 
-					{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="conceptos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					{END totals_row}

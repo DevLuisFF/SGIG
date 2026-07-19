@@ -35,7 +35,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsperiodos["Spanish"]["mes"] = "Mes";
 	$fieldToolTipsperiodos["Spanish"]["mes"] = "";
 	$placeHoldersperiodos["Spanish"]["mes"] = "";
-	$fieldLabelsperiodos["Spanish"]["anio"] = "Anio";
+	$fieldLabelsperiodos["Spanish"]["anio"] = "Año";
 	$fieldToolTipsperiodos["Spanish"]["anio"] = "";
 	$placeHoldersperiodos["Spanish"]["anio"] = "";
 	if (count($fieldToolTipsperiodos["Spanish"]))

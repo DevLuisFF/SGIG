@@ -292,19 +292,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_monto}</span>
 						</div>
 		{END searchCtrlBlock_monto}
-																{BEGIN searchCtrlBlock_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
-			<label>{$label transacciones id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
-						</div>
-		{END searchCtrlBlock_id}
 		
 
 	</div>
@@ -535,22 +522,22 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_class}
+		 r-ori-vert				{$periodo_id_class}
 			"
 
-			data-field="id"
+			data-field="periodo_id"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_fieldheadercolumn}
-	{BEGIN id_fieldheader}
-	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id">
-	{$label transacciones id }	{$arrow_icon_id}
+		{BEGIN periodo_id_fieldheadercolumn}
+	{BEGIN periodo_id_fieldheader}
+	<SPAN {$periodo_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="periodo_id">
+	{$label transacciones periodo_id }	{$arrow_icon_periodo_id}
 	</SPAN>
-	{END id_fieldheader}
-{END id_fieldheadercolumn}
+	{END periodo_id_fieldheader}
+{END periodo_id_fieldheadercolumn}
 
 	
 	</th>
@@ -562,22 +549,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$periodo_id_class}
+		 r-ori-vert				{$concepto_id_class}
 			"
 
-			data-field="periodo_id"
+			data-field="concepto_id"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN periodo_id_fieldheadercolumn}
-	{BEGIN periodo_id_fieldheader}
-	<SPAN {$periodo_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="periodo_id">
-	{$label transacciones periodo_id }	{$arrow_icon_periodo_id}
+		{BEGIN concepto_id_fieldheadercolumn}
+	{BEGIN concepto_id_fieldheader}
+	<SPAN {$concepto_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="concepto_id">
+	{$label transacciones concepto_id }	{$arrow_icon_concepto_id}
 	</SPAN>
-	{END periodo_id_fieldheader}
-{END periodo_id_fieldheadercolumn}
+	{END concepto_id_fieldheader}
+{END concepto_id_fieldheadercolumn}
 
 	
 	</th>
@@ -589,22 +576,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$concepto_id_class}
+		 r-ori-vert				{$tipo_class}
 			"
 
-			data-field="concepto_id"
+			data-field="tipo"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN concepto_id_fieldheadercolumn}
-	{BEGIN concepto_id_fieldheader}
-	<SPAN {$concepto_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="concepto_id">
-	{$label transacciones concepto_id }	{$arrow_icon_concepto_id}
+		{BEGIN tipo_fieldheadercolumn}
+	{BEGIN tipo_fieldheader}
+	<SPAN {$tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo">
+	{$label transacciones tipo }	{$arrow_icon_tipo}
 	</SPAN>
-	{END concepto_id_fieldheader}
-{END concepto_id_fieldheadercolumn}
+	{END tipo_fieldheader}
+{END tipo_fieldheadercolumn}
 
 	
 	</th>
@@ -616,45 +603,18 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$tipo_class}
-			"
-
-			data-field="tipo"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_fieldheadercolumn}
-	{BEGIN tipo_fieldheader}
-	<SPAN {$tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo">
-	{$label transacciones tipo }	{$arrow_icon_tipo}
-	</SPAN>
-	{END tipo_fieldheader}
-{END tipo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-				 
-					{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$monto_class}
 			"
 
 			data-field="monto"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN monto_fieldheadercolumn}
 	{BEGIN monto_fieldheader}
-	<SPAN {$monto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="monto">
+	<SPAN {$monto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="monto">
 	{$label transacciones monto }	{$arrow_icon_monto}
 	</SPAN>
 	{END monto_fieldheader}
@@ -662,7 +622,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 					 
 					 
@@ -757,35 +717,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_class}
-			"
-
-			data-field="id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" >
-{$id_value}
-</span>
-{END id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$periodo_id_class}
 			"
 
 			data-field="periodo_id"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -795,12 +732,12 @@
 </span>
 {END periodo_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 				 
-					{BEGIN cellblock_grid_cell_field2}
+					{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$concepto_id_class}
@@ -808,7 +745,7 @@
 
 			data-field="concepto_id"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -818,12 +755,12 @@
 </span>
 {END concepto_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 				 
-					{BEGIN cellblock_grid_cell_field3}
+					{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$tipo_class}
@@ -831,7 +768,7 @@
 
 			data-field="tipo"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -841,12 +778,12 @@
 </span>
 {END tipo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field4}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$monto_class}
@@ -854,7 +791,7 @@
 
 			data-field="monto"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -864,7 +801,7 @@
 </span>
 {END monto_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 							</tr>
 					 
 					
@@ -977,22 +914,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-				 
-					{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="transacciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					{END totals_row}

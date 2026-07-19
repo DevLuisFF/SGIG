@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'master' => array( 'periodos' => array( 'preview' => false ),
-'conceptos' => array( 'preview' => false ) ),
+'conceptos' => array( 'preview' => false ),
+'periodos_lookup' => array( 'preview' => false ),
+'conceptos_lookup' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'periodo_id',
 'concepto_id',
