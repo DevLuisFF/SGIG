@@ -110,30 +110,30 @@
 
 {END id_fieldblock}
 											
-{BEGIN display_name_fieldblock}
+{BEGIN label_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_display_name}  r-horizontal-field form-horizontal" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_label}  r-horizontal-field form-horizontal" 
 	
-		data-fieldname="display_name" 
+		data-fieldname="label" 
 	
-	data-signal-error-for="display_name{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="display_name" >
+	data-signal-error-for="label{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="label" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_display_name}">
-		{$label periodos_lookup display_name }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_label}">
+		{$label periodos_lookup label }	</label>
 	<div class="r-search-option">
-		{$searchtype_display_name}
+		{$searchtype_label}
 	</div>
 	<div class="r-search-field">
-		{$display_name_editcontrol}	</div>
+		{$label_editcontrol}	</div>
 	<div class="r-search-field">
-		{$display_name_editcontrol1}
+		{$label_editcontrol1}
 	</div>
 	
 </div>
 
-{END display_name_fieldblock}
+{END label_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

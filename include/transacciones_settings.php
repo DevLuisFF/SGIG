@@ -453,7 +453,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "id";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "display_name";
+	$edata["DisplayField"] = "label";
 
 	
 
@@ -602,7 +602,7 @@ $tdatatransacciones[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "id";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "display_name";
+	$edata["DisplayField"] = "label";
 
 	
 
