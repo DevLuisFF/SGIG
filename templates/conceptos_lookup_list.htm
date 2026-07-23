@@ -239,19 +239,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
 						</div>
 		{END searchCtrlBlock_id}
-																{BEGIN searchCtrlBlock_display_name}
+																{BEGIN searchCtrlBlock_label}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_display_name}" {$filterRow_attrs_display_name}>
-			<label>{$label conceptos_lookup display_name }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_label}" {$filterRow_attrs_label}>
+			<label>{$label conceptos_lookup label }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_display_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_display_name}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_display_name}</span>
+								<span class="rnr-searchtype">{$searchtype_label}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_label}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_label}</span>
 						</div>
-		{END searchCtrlBlock_display_name}
+		{END searchCtrlBlock_label}
 		
 
 	</div>
@@ -396,8 +396,8 @@
 		content: "{$label conceptos_lookup id}";
 	}
 	
-	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="display_name"]:before {
-		content: "{$label conceptos_lookup display_name}";
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="label"]:before {
+		content: "{$label conceptos_lookup label}";
 	}
 	
 }
@@ -505,22 +505,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$display_name_class}
+		 r-ori-vert				{$label_class}
 			"
 
-			data-field="display_name"
+			data-field="label"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN display_name_fieldheadercolumn}
-	{BEGIN display_name_fieldheader}
-	<SPAN {$display_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="display_name">
-	{$label conceptos_lookup display_name }	{$arrow_icon_display_name}
+		{BEGIN label_fieldheadercolumn}
+	{BEGIN label_fieldheader}
+	<SPAN {$label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="label">
+	{$label conceptos_lookup label }	{$arrow_icon_label}
 	</SPAN>
-	{END display_name_fieldheader}
-{END display_name_fieldheadercolumn}
+	{END label_fieldheader}
+{END label_fieldheadercolumn}
 
 	
 	</th>
@@ -672,20 +672,20 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$display_name_class}
+		 r-ori-vert				{$label_class}
 			"
 
-			data-field="display_name"
+			data-field="label"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN display_name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="display_name" >
-{$display_name_value}
+		{BEGIN label_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="label" >
+{$label_value}
 </span>
-{END display_name_fieldcolumn}	
+{END label_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 							</tr>

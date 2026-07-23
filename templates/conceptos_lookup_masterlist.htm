@@ -78,20 +78,20 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$display_name_class}
+		 r-ori-vert				{$label_class}
 			"
 
-			data-field="display_name"
+			data-field="label"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN display_name_fieldheadercolumn}
+		{BEGIN label_fieldheadercolumn}
  
-	<label data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="display_name">
-	{$label conceptos_lookup display_name }	</label>
-{END display_name_fieldheadercolumn}
+	<label data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="label">
+	{$label conceptos_lookup label }	</label>
+{END label_fieldheadercolumn}
 
 	
 	</th>
@@ -141,20 +141,20 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$display_name_class}
+		 r-ori-vert				{$label_class}
 			"
 
-			data-field="display_name"
+			data-field="label"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN display_name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="display_name" >
-{$display_name_value}
+		{BEGIN label_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="label" >
+{$label_value}
 </span>
-{END display_name_fieldcolumn}	
+{END label_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 							</tr>

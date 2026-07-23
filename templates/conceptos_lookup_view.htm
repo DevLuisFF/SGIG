@@ -104,24 +104,24 @@
 
 {END id_fieldblock}
 											
-{BEGIN display_name_fieldblock}
+{BEGIN label_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_display_name}  r-vertical-field" data-fieldname="display_name" data-signal-error-for="display_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="display_name" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_label}  r-vertical-field" data-fieldname="label" data-signal-error-for="label{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="label" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_display_name}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_label}">
 		
-		{BEGIN display_name_label}{$label conceptos_lookup display_name }{END display_name_label}
+		{BEGIN label_label}{$label conceptos_lookup label }{END label_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$display_name_value}	</div>
+		{$label_value}	</div>
 
 		
 </div>
 
 
-{END display_name_fieldblock}
+{END label_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

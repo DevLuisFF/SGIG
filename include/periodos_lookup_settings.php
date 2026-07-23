@@ -32,9 +32,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsperiodos_lookup["Spanish"]["id"] = "Id";
 	$fieldToolTipsperiodos_lookup["Spanish"]["id"] = "";
 	$placeHoldersperiodos_lookup["Spanish"]["id"] = "";
-	$fieldLabelsperiodos_lookup["Spanish"]["display_name"] = "Display Name";
-	$fieldToolTipsperiodos_lookup["Spanish"]["display_name"] = "";
-	$placeHoldersperiodos_lookup["Spanish"]["display_name"] = "";
+	$fieldLabelsperiodos_lookup["Spanish"]["label"] = "Label";
+	$fieldToolTipsperiodos_lookup["Spanish"]["label"] = "";
+	$placeHoldersperiodos_lookup["Spanish"]["label"] = "";
 	if (count($fieldToolTipsperiodos_lookup["Spanish"]))
 		$tdataperiodos_lookup[".isUseToolTips"] = true;
 }
@@ -160,7 +160,7 @@ $tdataperiodos_lookup[".requiredSearchFields"] = array();
 
 $tdataperiodos_lookup[".googleLikeFields"] = array();
 $tdataperiodos_lookup[".googleLikeFields"][] = "id";
-$tdataperiodos_lookup[".googleLikeFields"][] = "display_name";
+$tdataperiodos_lookup[".googleLikeFields"][] = "label";
 
 
 
@@ -191,15 +191,15 @@ $tdataperiodos_lookup[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY anio DESC, mes DESC";
 if(strlen($tstrOrderBy) && strtolower(substr($tstrOrderBy,0,8))!="order by")
 	$tstrOrderBy = "order by ".$tstrOrderBy;
 $tdataperiodos_lookup[".strOrderBy"] = $tstrOrderBy;
 
 $tdataperiodos_lookup[".orderindexes"] = array();
 
-$tdataperiodos_lookup[".sqlHead"] = " ";
-$tdataperiodos_lookup[".sqlFrom"] = "";
+$tdataperiodos_lookup[".sqlHead"] = "SELECT id,      CONCAT(          CASE mes              WHEN 1 THEN 'Enero'              WHEN 2 THEN 'Febrero'              WHEN 3 THEN 'Marzo'              WHEN 4 THEN 'Abril'              WHEN 5 THEN 'Mayo'              WHEN 6 THEN 'Junio'              WHEN 7 THEN 'Julio'              WHEN 8 THEN 'Agosto'              WHEN 9 THEN 'Septiembre'              WHEN 10 THEN 'Octubre'              WHEN 11 THEN 'Noviembre'              WHEN 12 THEN 'Diciembre'          END,          ' ',          anio      ) AS label";
+$tdataperiodos_lookup[".sqlFrom"] = "FROM periodos";
 $tdataperiodos_lookup[".sqlWhereExpr"] = "";
 $tdataperiodos_lookup[".sqlTail"] = "";
 
@@ -252,7 +252,7 @@ $tdataperiodos_lookup[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "id";
 	$fdata["GoodName"] = "id";
-	$fdata["ownerTable"] = "";
+	$fdata["ownerTable"] = "periodos";
 	$fdata["Label"] = GetFieldLabel("periodos_lookup","id");
 	$fdata["FieldType"] = 3;
 
@@ -264,7 +264,8 @@ $tdataperiodos_lookup[".hideMobileList"] = array();
 
 		$fdata["strField"] = "id";
 
-		$fdata["FullName"] = "id";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "id";
 
 	
 	
@@ -372,14 +373,14 @@ $tdataperiodos_lookup[".hideMobileList"] = array();
 
 	$tdataperiodos_lookup["id"] = $fdata;
 		$tdataperiodos_lookup[".searchableFields"][] = "id";
-//	display_name
+//	label
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "display_name";
-	$fdata["GoodName"] = "display_name";
+	$fdata["strName"] = "label";
+	$fdata["GoodName"] = "label";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("periodos_lookup","display_name");
+	$fdata["Label"] = GetFieldLabel("periodos_lookup","label");
 	$fdata["FieldType"] = 200;
 
 	
@@ -387,9 +388,10 @@ $tdataperiodos_lookup[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "display_name";
+		$fdata["strField"] = "label";
 
-		$fdata["FullName"] = "display_name";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "CONCAT(          CASE mes              WHEN 1 THEN 'Enero'              WHEN 2 THEN 'Febrero'              WHEN 3 THEN 'Marzo'              WHEN 4 THEN 'Abril'              WHEN 5 THEN 'Mayo'              WHEN 6 THEN 'Junio'              WHEN 7 THEN 'Julio'              WHEN 8 THEN 'Agosto'              WHEN 9 THEN 'Septiembre'              WHEN 10 THEN 'Octubre'              WHEN 11 THEN 'Noviembre'              WHEN 12 THEN 'Diciembre'          END,          ' ',          anio      )";
 
 	
 	
@@ -492,8 +494,8 @@ $tdataperiodos_lookup[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataperiodos_lookup["display_name"] = $fdata;
-		$tdataperiodos_lookup[".searchableFields"][] = "display_name";
+	$tdataperiodos_lookup["label"] = $fdata;
+		$tdataperiodos_lookup[".searchableFields"][] = "label";
 
 
 $tables_data["periodos_lookup"]=&$tdataperiodos_lookup;
@@ -557,11 +559,11 @@ require_once(getabspath("classes/sql.php"));
 function createSqlQuery_periodos_lookup()
 {
 $proto0=array();
-$proto0["m_strHead"] = "";
-$proto0["m_strFieldList"] = "";
-$proto0["m_strFrom"] = "";
+$proto0["m_strHead"] = "SELECT";
+$proto0["m_strFieldList"] = "id,      CONCAT(          CASE mes              WHEN 1 THEN 'Enero'              WHEN 2 THEN 'Febrero'              WHEN 3 THEN 'Marzo'              WHEN 4 THEN 'Abril'              WHEN 5 THEN 'Mayo'              WHEN 6 THEN 'Junio'              WHEN 7 THEN 'Julio'              WHEN 8 THEN 'Agosto'              WHEN 9 THEN 'Septiembre'              WHEN 10 THEN 'Octubre'              WHEN 11 THEN 'Noviembre'              WHEN 12 THEN 'Diciembre'          END,          ' ',          anio      ) AS label";
+$proto0["m_strFrom"] = "FROM periodos";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY anio DESC, mes DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -598,9 +600,112 @@ $obj = new SQLLogicalExpr($proto4);
 
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
+						$proto6=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id",
+	"m_strTable" => "periodos",
+	"m_srcTableName" => "periodos_lookup"
+));
+
+$proto6["m_sql"] = "id";
+$proto6["m_srcTableName"] = "periodos_lookup";
+$proto6["m_expr"]=$obj;
+$proto6["m_alias"] = "";
+$obj = new SQLFieldListItem($proto6);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto8=array();
+			$proto9=array();
+$proto9["m_functiontype"] = "SQLF_CUSTOM";
+$proto9["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "CASE mes              WHEN 1 THEN 'Enero'              WHEN 2 THEN 'Febrero'              WHEN 3 THEN 'Marzo'              WHEN 4 THEN 'Abril'              WHEN 5 THEN 'Mayo'              WHEN 6 THEN 'Junio'              WHEN 7 THEN 'Julio'              WHEN 8 THEN 'Agosto'              WHEN 9 THEN 'Septiembre'              WHEN 10 THEN 'Octubre'              WHEN 11 THEN 'Noviembre'              WHEN 12 THEN 'Diciembre'          END"
+));
+
+$proto9["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "' '"
+));
+
+$proto9["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "anio"
+));
+
+$proto9["m_arguments"][]=$obj;
+$proto9["m_strFunctionName"] = "CONCAT";
+$obj = new SQLFunctionCall($proto9);
+
+$proto8["m_sql"] = "CONCAT(          CASE mes              WHEN 1 THEN 'Enero'              WHEN 2 THEN 'Febrero'              WHEN 3 THEN 'Marzo'              WHEN 4 THEN 'Abril'              WHEN 5 THEN 'Mayo'              WHEN 6 THEN 'Junio'              WHEN 7 THEN 'Julio'              WHEN 8 THEN 'Agosto'              WHEN 9 THEN 'Septiembre'              WHEN 10 THEN 'Octubre'              WHEN 11 THEN 'Noviembre'              WHEN 12 THEN 'Diciembre'          END,          ' ',          anio      )";
+$proto8["m_srcTableName"] = "periodos_lookup";
+$proto8["m_expr"]=$obj;
+$proto8["m_alias"] = "label";
+$obj = new SQLFieldListItem($proto8);
+
+$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
+												$proto13=array();
+$proto13["m_link"] = "SQLL_MAIN";
+			$proto14=array();
+$proto14["m_strName"] = "periodos";
+$proto14["m_srcTableName"] = "periodos_lookup";
+$proto14["m_columns"] = array();
+$proto14["m_columns"][] = "id";
+$proto14["m_columns"][] = "mes";
+$proto14["m_columns"][] = "anio";
+$obj = new SQLTable($proto14);
+
+$proto13["m_table"] = $obj;
+$proto13["m_sql"] = "periodos";
+$proto13["m_alias"] = "";
+$proto13["m_srcTableName"] = "periodos_lookup";
+$proto15=array();
+$proto15["m_sql"] = "";
+$proto15["m_uniontype"] = "SQLL_UNKNOWN";
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
+));
+
+$proto15["m_column"]=$obj;
+$proto15["m_contained"] = array();
+$proto15["m_strCase"] = "";
+$proto15["m_havingmode"] = false;
+$proto15["m_inBrackets"] = false;
+$proto15["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto15);
+
+$proto13["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto13);
+
+$proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto17=array();
+						$obj = new SQLField(array(
+	"m_strName" => "anio",
+	"m_strTable" => "periodos",
+	"m_srcTableName" => "periodos_lookup"
+));
+
+$proto17["m_column"]=$obj;
+$proto17["m_bAsc"] = 0;
+$proto17["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto17);
+
+$proto0["m_orderby"][]=$obj;					
+												$proto19=array();
+						$obj = new SQLField(array(
+	"m_strName" => "mes",
+	"m_strTable" => "periodos",
+	"m_srcTableName" => "periodos_lookup"
+));
+
+$proto19["m_column"]=$obj;
+$proto19["m_bAsc"] = 0;
+$proto19["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto19);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="periodos_lookup";		
 $obj = new SQLQuery($proto0);
 

@@ -1,10 +1,10 @@
 <?php
 			$optionsArray = array( 'fields' => array( 'gridFields' => array( 'id',
-'display_name' ),
+'label' ),
 'searchRequiredFields' => array(  ),
 'searchPanelFields' => array(  ),
 'fieldItems' => array( 'id' => array( 'import_field' ),
-'display_name' => array( 'import_field1' ) ) ),
+'label' => array( 'import_field1' ) ) ),
 'pageLinks' => array( 'edit' => false,
 'add' => false,
 'view' => false,
@@ -57,7 +57,7 @@
 'items' => array( 'import_header' => array( 'type' => 'import_header' ),
 'import_field' => array( 'field' => 'id',
 'type' => 'import_field' ),
-'import_field1' => array( 'field' => 'display_name',
+'import_field1' => array( 'field' => 'label',
 'type' => 'import_field' ) ),
 'dbProps' => array(  ),
 'version' => 2 );
